@@ -1,4 +1,4 @@
-type Gencost
+struct Gencost
     "cost model, 1 = piecewise linear, 2 = polynomial "
     MODEL::Vector{Int64}
     "startup cost in US dollars"

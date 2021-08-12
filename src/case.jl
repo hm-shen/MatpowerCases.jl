@@ -1,11 +1,11 @@
-type Case
+struct Case
     baseMVA::Float64
     gen::Gen
     branch::Branch
     docstring::AbstractString
     bus::Bus
     version::Int64
-    gencost::Union{Gencost, Void}
+    gencost::Union{Gencost, Nothing}
     areas
     bus_name::Vector{AbstractString}
 end
