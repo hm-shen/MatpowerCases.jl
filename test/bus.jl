@@ -1,4 +1,4 @@
-using MatpowerCases, Base.Test
+using MatpowerCases, Test
 
 println("- extract_bus check")
 for c in casenames()

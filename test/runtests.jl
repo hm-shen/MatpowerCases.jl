@@ -1,4 +1,5 @@
-using MatpowerCases, Base.Test
+# using MatpowerCases, Base.Test
+using Test, MatpowerCases
 
 println("Running tests...")
 

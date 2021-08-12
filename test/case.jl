@@ -1,4 +1,4 @@
-using MatpowerCases, Base.Test
+using MatpowerCases, Test
 
 println("- extract_case check")
 for c in casenames()
@@ -7,6 +7,6 @@ for c in casenames()
     @assert isa(extract_case(c), MatpowerCases.Case)
 end
 
-c = joinpath(Pkg.dir(),"MatpowerCases","data","case118.mat")
+c = joinpath(@__DIR__, "..", "data", "case118.mat")
 loadcase(c; describe=false)
 @assert isa(extract_case(c), MatpowerCases.Case)

@@ -26,14 +26,14 @@ function extract_case(mpc)
     if in("baseMVA", k)
         baseMVA = mpc["baseMVA"]
     else
-        info("No base MVA found. Guessing 100.0.")
+        @info("No base MVA found. Guessing 100.0.")
         baseMVA = 100.0
     end
     gen = extract_gen(mpc)
     branch = extract_branch(mpc)
     docstring = in("docstring", k) ? mpc["docstring"] : ""
     bus = extract_bus(mpc)
-    version = in("version", k) ? parse(mpc["version"]) : 1
+    version = in("version", k) ? parse(Int64, mpc["version"]) : 1
     gencost = in("gencost", k) ? extract_gencost(mpc) : nothing
     areas = in("areas", k) ? mpc["areas"] : nothing
     bus_name = in("bus_name", k) ? mpc["bus_name"][:] : AbstractString[]
