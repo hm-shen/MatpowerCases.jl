@@ -22,7 +22,8 @@ function loadcase(caseName::AbstractString; describe=true)
     end
 
     mpc = matread(p)["mpc"]
-    ds = mpc["docstring"]
+    ds = get(mac, "docstring", "")
+    # ds = mpc["docstring"]
     if describe
         println(split(ds,"\n")[1])
     end
