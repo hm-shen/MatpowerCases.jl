@@ -14,7 +14,8 @@ println("- file check")
 
 # Ensure every network's mpc Dict contains these keys:
 println("- key check")
-key_list = ["gen";"branch" ;"docstring";"bus"]
+# key_list = ["gen";"branch" ;"docstring";"bus"]
+key_list = ["gen";"branch";"bus"]
 key_test = Bool[]
 for name in casenames()
     mpc = loadcase(name,describe=false)
